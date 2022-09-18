@@ -42,7 +42,7 @@ extension HomeView {
             leftAction: {
                 print("DO SOMETHING")
             },
-            title: isPortflio ? "Live Prices" : "Portfolio",
+            title: isPortflio ? "Portfolio" : "Live Prices",
             isPortflio: $isPortflio
         )
     }
