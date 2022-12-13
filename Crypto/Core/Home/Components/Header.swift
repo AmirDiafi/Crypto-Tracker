@@ -13,7 +13,7 @@ struct Header: View {
     let rightAction: () -> Void
     let leftAction: () -> Void
     let title: String
-    @Binding var isPortflio: Bool
+    @Binding var isPortfolio: Bool
     
     var body: some View {
         HStack {
@@ -21,7 +21,7 @@ struct Header: View {
                 imageName: leftIconName,
                 action: leftAction)
             .background (
-                AnimatedCircleView(isAnimation: $isPortflio)
+                AnimatedCircleView(isAnimation: $isPortfolio)
             )
             Spacer()
             Text(title)
@@ -32,7 +32,7 @@ struct Header: View {
             ImageButton(
                 imageName: rightIconName,
                 action: rightAction)
-            .rotationEffect(Angle(degrees: isPortflio ? 180 : 0))
+            .rotationEffect(Angle(degrees: isPortfolio ? 180 : 0))
         }
         
     }
@@ -50,7 +50,7 @@ struct Header_Previews: PreviewProvider {
                 print("Left Clicked")
             },
             title: "Live Prices",
-            isPortflio: .constant(false)
+            isPortfolio: .constant(false)
         )
     }
 }
