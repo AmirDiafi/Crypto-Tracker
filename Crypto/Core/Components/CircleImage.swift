@@ -8,13 +8,20 @@
 import SwiftUI
 
 struct CircleImage: View {
-    let ITEM_SIZE: CGFloat = 50
+    let itemSize: CGFloat
     let imageName: String
+    
+    init(imageName: String, itemSize: Double = 50) {
+        self.imageName = imageName
+        self.itemSize = itemSize
+    }
+    
+    
     var body: some View {
         Image(systemName: imageName)
             .font(.headline)
             .foregroundColor(Color.theme.accent)
-            .frame(width: ITEM_SIZE, height: ITEM_SIZE)
+            .frame(width: itemSize, height: itemSize)
             .background(
                 Circle()
                     .fill(Color.theme.background)

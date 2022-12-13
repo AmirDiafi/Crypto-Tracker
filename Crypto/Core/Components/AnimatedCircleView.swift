@@ -14,7 +14,9 @@ struct AnimatedCircleView: View {
             .stroke(lineWidth: 3)
             .scaleEffect(isAnimation ? 1 : 0)
             .opacity(isAnimation ? 0 : 1)
-            .animation(isAnimation ? .easeOut(duration: 1.0) : .none)
+            .animation(
+                isAnimation ?
+                    .easeOut(duration: 1.0) : .none, value: isAnimation)
     }
 }
 
